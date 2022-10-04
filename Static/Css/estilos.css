@@ -50,6 +50,13 @@ body{
     margin: 3px;
 }
 
+.register{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    padding-inline-start: 18%;   
+}
+
 .link{
     text-decoration: none;
     color: #3D8B90;
