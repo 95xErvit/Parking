@@ -1,73 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="Static/Css/estilos.css">
     <title>Registro Usuario</title>
-    <link rel="icon" href="LogoTecParking.jpg">
 
 </head>
+
 <body>
 
     <div class="container w-75 bg-light mt-5 mb-5 rounded-5 shadow">
-            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-5">
+        <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-5">
 
+        </div>
+        <div class="col bg-white p-4 rounded-5">
+            <div class="text-end">
+                <img src="LogoTecParking.jpg" alt="" width="60">
             </div>
-            <div class="col bg-white p-4 rounded-5">
-                <div class="text-end">
-                    <img src="LogoTecParking.jpg" alt="" width="60">
+
+            <!-- FORMULARIO DE REGISTRO -->
+
+            <h1 class="fw-bold text-center py-3">Registro</h1>
+            <form action="#" id="formularioCrear">
+                <div class="main-user-info justify-content-evenly">
+                    <div class="user-input-box mb-4">
+                        <label for="name" class="form-label fw-semibold">Nombre</label>
+                        <input id="nombre" type="name" class="form-control" name="name"
+                            placeholder="Ingrese su número de nombre">
+                    </div>
+                    <div class="user-input-box mb-4">
+                        <label for="lastname" class="form-label fw-semibold">Apellido</label>
+                        <input id="apellido" type="lastname" class="form-control" name="lastname"
+                            placeholder="Ingrese su apellido">
+                    </div>
+                    <div class="user-input-box mb-4">
+                        <label for="id" class="form-label fw-semibold">Documento de identidad</label>
+                        <input id="documento" type="id" class="form-control" name="id"
+                            placeholder="Ingrese su identifiación">
+                    </div>
+                    <div class="user-input-box mb-4">
+                        <label for="email" class="form-label fw-semibold">Correo Electronico</label>
+                        <input id="correo" type="email" class="form-control" name="email"
+                            placeholder="Ingrese su nueva correo electronico">
+                    </div>
+                    <div class="user-input-box mb-4">
+                        <label for="Password" class="form-label fw-semibold">Clave</label>
+                        <input id="clave" type="Password" class="form-control" name="Password"
+                            placeholder="Ingrese su nueva clave">
+                    </div>
+                    <div class="user-input-box mb-4">
+                        <label for="confirmPassword" class="form-label fw-semibold">Confirmar Clave</label>
+                        <input type="Password" class="form-control" name="confirmPassword"
+                            placeholder="Ingrese nueva su nueva clave">
+                    </div>
                 </div>
-
-                <!-- FORMULARIO DE REGISTRO -->
-
-                <h1 class="fw-bold text-center py-3">Registro</h1>
-                <form action="#" id="formularioCrear">
-                    <div class="main-user-info justify-content-evenly">
-                        <div class="user-input-box mb-4">
-                            <label for="nombre" class="form-label fw-semibold">Nombre</label>
-                            <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre">
-                        </div>
-                        <div class="user-input-box mb-4">
-                            <label for="apellido" class="form-label fw-semibold">Apellido</label>
-                            <input type="text" class="form-control" name="apellido" placeholder="Ingrese su apellido">
-                        </div>
-                        <div class="user-input-box mb-4">
-                            <label for="numero_documento" class="form-label fw-semibold">Documento de identidad</label>
-                            <input type="id" class="form-control" name="numero_documento" placeholder="Ingrese su identifiación">
-                        </div>
-                        <div class="user-input-box mb-4">
-                            <label for="correo_electronico" class="form-label fw-semibold">Correo Electronico</label>
-                            <input type="email" class="form-control" name="correo_electronico" placeholder="Ingrese su correo electronico">
-                        </div>
-                        <div class="user-input-box mb-4">
-                            <label for="clave" class="form-label fw-semibold">Clave</label>
-                            <input type="Password" class="form-control" name="clave" placeholder="Ingrese su nueva clave">
-                        </div>
-                        <div class="user-input-box mb-4">
-                            <label for="clave" class="form-label fw-semibold">Confirmar Clave</label>
-                            <input type="Password" class="form-control" name="clave" placeholder="Confirme su nueva clave">
-                        </div>   
-                        </div>
-                            <div class="register mb-4">
-                                <button type="submit" class="btn btn-primary fw-bold">Registrarme</button>
-                            </div>
-                            <div class="login mt-5 text-center ">
-                                <span>¿Ya tienes una cuenta?<a class="link" href="Login.html"> Iniciar Sesión</a></span>
-                            </div>
-                        </div>
-                    </form>
+                <div class="register mb-4">
+                    <button id="btnCrear" type="submit" class="btn btn-primary fw-bold">Registrarme</button>
                 </div>
+                <div class="login mt-5 text-center ">
+                    <span>¿Ya tienes una cuenta?<a class="link" href="Login.html"> Iniciar Sesión</a></span>
+                </div>
+                </div>
+             </form>
+        </div>
 
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 
-                <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-                <script src="api_ConexionBackend.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="api_ConexionBackend.js"></script>
+</body>
 
-    </body>
-    </html>
+</html>
 
 
 

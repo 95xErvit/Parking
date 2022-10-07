@@ -1,5 +1,3 @@
-//guardar usuario base de datos
-
 const formularioCrear = document.querySelector('#formularioCrear')
 
 try {
@@ -24,13 +22,18 @@ try {
       clave: clave
     }).then(res => {
       console.log(res.data);
+
+      return alert('Usted se registro con Exito!')
     })
   }
 } catch (error) {
   console.log(error)
 }
 
-// Encontrar usuario guardado en base de datos en "Login"
+
+// =============================================================================================
+// encontrar usuario guardado en base de datos "login"
+// =============================================================================================
 
 const formularioIngresar = document.querySelector('#formularioIngresar')
 
@@ -42,15 +45,15 @@ try {
 
   function iniciarUsuario() {
     const url = 'https://backend-parqueadero.onrender.com/api/usuario/'
-    const numero_documento = document.querySelector('#documentoLogin').value
+    const correo_electronico = document.querySelector('#correoLogin').value
     const clave = document.querySelector('#claveLogin').value
     
     axios.get(url).then(res => {
       const usuarios = res.data
 
       for (const usuario of usuarios) {
-        if (usuario.numero_documento === numero_documento && usuario.clave === clave) {
-          return window.location.replace('http://127.0.0.1:5500/Login.html?numero_documento=1085938586&clave=Erikparkin01*#')
+        if (usuario.correo_electronico === correo_electronico && usuario.clave === clave) {
+          return window.location.replace('http://127.0.0.1:5500/Ticket.html')
         }
       }
 
@@ -62,8 +65,9 @@ try {
   console.log(error)
 }
 
-
+// =============================================================================================
 // Generar ticket y vehiculo
+// =============================================================================================
 
 const formularioCrearTicket = document.querySelector('#formularioCrearTicket')
 
@@ -76,7 +80,7 @@ try {
   function guardarTicket() {
     const urlVehiculo = 'https://backend-parqueadero.onrender.com/api/vehiculo/'
     const urlTicket = 'https://backend-parqueadero.onrender.com/api/ticket/'
-    const vehiculo = document.querySelector('#vehiculo').value
+    const tipo_vehiculo = document.querySelector('#tipo_vehiculo').value
     const placa = document.querySelector('#placa').value
     const hora_entrada = document.querySelector('#hora_entrada').value
     const hora_salida = document.querySelector('#hora_salida').value
@@ -85,7 +89,7 @@ try {
     
     axios.post(urlVehiculo, {
       placa: placa,
-      vehiculo: vehiculo
+      tipo_vehiculo: tipo_vehiculo
     }).then(res => {
       const idVehiculo = res.data.id
       axios.post(urlTicket,{
