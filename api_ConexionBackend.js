@@ -53,7 +53,7 @@ try {
       
       for (const usuario of usuarios) {
         if (usuario.numero_documento === numero_documento && usuario.clave === clave) {
-          return window.location.replace('https://harmonious-cobbler-c83469.netlify.app/ticket')
+          return window.location.replace('https://tecparkingcolombia.netlify.app/registro')
         }
       }
 
