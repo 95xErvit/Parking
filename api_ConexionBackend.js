@@ -45,14 +45,14 @@ try {
 
   function iniciarUsuario() {
     const url = 'https://backend-parqueadero.onrender.com/api/usuario/'
-    const correo_electronico = document.querySelector('#correoLogin').value
+    const numero_documento = document.querySelector('#correoLogin').value
     const clave = document.querySelector('#claveLogin').value
     
     axios.get(url).then(res => {
       const usuarios = res.data
-
+      
       for (const usuario of usuarios) {
-        if (usuario.correo_electronico === correo_electronico && usuario.clave === clave) {
+        if (usuario.numero_documento === numero_documento && usuario.clave === clave) {
           return window.location.replace('http://127.0.0.1:5500/Ticket.html')
         }
       }
