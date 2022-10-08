@@ -53,7 +53,7 @@ try {
       
       for (const usuario of usuarios) {
         if (usuario.numero_documento === numero_documento && usuario.clave === clave) {
-          return window.location.replace('https://tecparkingcolombia.netlify.app/registro')
+          return window.location.replace('https://tecparkingcolombia.netlify.app/ticket')
         }
       }
 
