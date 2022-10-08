@@ -53,7 +53,7 @@ try {
       
       for (const usuario of usuarios) {
         if (usuario.numero_documento === numero_documento && usuario.clave === clave) {
-          return window.location.replace('http://127.0.0.1:5500/Ticket.html')
+          return window.location.replace('https://harmonious-cobbler-c83469.netlify.app/ticket')
         }
       }
 
